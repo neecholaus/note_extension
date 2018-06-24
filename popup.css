@@ -1,0 +1,46 @@
+body {
+  margin: 0 !important;
+  background: #f4ea8d;
+}
+
+#text {
+  width: 350px;
+  height: 150px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: Monospace, sans-serif;
+  font-size: 15px;
+  sele
+}
+
+#text:focus {
+  outline: none;
+}
+
+#text::selection {
+  background: #3dcec4;
+  color: white;
+}
+
+#button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: solid 1px #dbcd90;
+  padding: 12px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #635c40;
+}
+
+#button:hover {
+    background: #eae188;
+    cursor: pointer;
+}
+
+#button:focus {
+  outline: none;
+}
