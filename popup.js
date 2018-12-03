@@ -1,19 +1,20 @@
-let text = document.getElementById('text');
-let button = document.getElementById('button');
+let name = document.getElementById('note-name');
+let text = document.getElementById('note-body');
+let button = document.getElementById('note-save');
 
 
-button.addEventListener('click', function() {
-  let note = text.value;
+button.addEventListener('click', function () {
+    let note = text.value;
+    let empty = note.replace(/\s/g, '') == '';
 
-  let a = document.createElement('a');
+    if (empty) return;
 
-  let data = new Blob([note], {type: 'text/plain'});
+    let a = document.createElement('a');
+    let data = new Blob([note], { type: 'text/plain' });
+    let file = window.URL.createObjectURL(data);
 
-  let file = window.URL.createObjectURL(data);
-
-  a.download = "Note";
-
-  a.href = file;
-
-  a.click();
+    // Use given file name before the default 'Note'
+    a.download = name.value.replace(/\s/g, '') ? name.value : "New Note";
+    a.href = file;
+    a.click();
 });

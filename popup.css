@@ -1,47 +1,53 @@
 body {
   margin: 0 !important;
-  background: #f4ea8d;
+  background: #f4ea8d;  
 }
 
-#text {
+body * {
+    font-family: Monospace, sans-serif;
+    font-size: 15px;
+}
+
+#note-name {
+    background: transparent;
+    width: 100%;
+    border: none;    
+    border-bottom: solid 1px #dbcd90;
+    padding: 12px;    
+}
+
+#note-body {
   width: 350px;
   height: 150px;
   padding: 12px;
   background: transparent;
   border: none;
-  resize: none;
-  font-family: Monospace, sans-serif;
-  font-size: 15px;
-  sele
+  resize: none;  
 }
 
-#text:focus {
+#note-name:focus, #note-body:focus {
   outline: none;
 }
 
-#text::selection {
-  background: #3dcec4;
+#note-body::selection {  
+  background: #87663b;
   color: white;
 }
 
-#button {
+#note-save {
   width: 100%;
   background: transparent;
   border: none;
   border-top: solid 1px #dbcd90;
-  padding: 12px;
-  font-family: 'Cabin', sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #635c40;
+  padding: 12px;  
+  color: #635c40;  
 }
 
-#button:hover {
+#note-save:hover {
     background: #eae188;
     cursor: pointer;
 }
 
-#button:focus {
+#note-save:focus {
   outline: none;
 }
